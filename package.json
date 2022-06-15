@@ -1,0 +1,20 @@
+{
+  "name": "pakistan-state-bank-exchange-rate-api",
+  "version": "1.0.0",
+  "description": "Read State bank price pdf",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Muhammad Khan",
+    "email": "muhammadkhan1607@gmail.com",
+    "url": "https://muhammadkhan.dev/"
+  },
+  "type": "module",
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "cli-progress": "^3.11.1",
+    "dayjs": "^1.11.3",
+    "nodejs-file-downloader": "^4.9.3",
+    "pdfreader": "^2.0.0"
+  }
+}
