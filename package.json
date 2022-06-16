@@ -16,5 +16,8 @@
     "dayjs": "^1.11.3",
     "nodejs-file-downloader": "^4.9.3",
     "pdfreader": "^2.0.0"
+  },
+  "scripts": {
+    "start": "NODE_NO_WARNINGS=1 node index.js"
   }
 }

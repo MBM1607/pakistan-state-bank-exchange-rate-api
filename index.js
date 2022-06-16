@@ -44,24 +44,22 @@ const downloadFile = async (date) => {
   try {
     bar.start(100, 0);
     await downloader.download();
+    downloader.cancel();
     bar.update(100);
     bar.stop();
-
     console.info(chalk.green(`Exchange rate for: ${date} are downloaded.`));
-    return true;
+
+    getUsdPrice(`${today}.pdf`);
   }
   catch (error) {
+    bar.stop();
+
     console.error(chalk.red('Download failed!!', error));
     console.debug(`URL: ${url}`);
-    return false;
   }
 };
 
 // Get today's date
 const today = dayjs().format('DD-MMM-YYYY');
 
-if (downloadFile(today)) {
-  setTimeout(() => {
-    getUsdPrice(`${today}.pdf`);
-  }, 1000);
-}
+downloadFile(today);
